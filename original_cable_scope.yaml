@@ -1,0 +1,79 @@
+1: |
+    Cabinet 1 - Stores: 
+    Existing cabinet and cabling to be decommissioned and disposed of 
+    Replace 10x cat5 network outlets with new cat6 cabling back to maintenance cabinet, 
+    Replace 6 x Cat6 cables for CCTV cameras back to maintenance cabinet 
+2: |
+    Cabinet 2 - Maintenance: 
+    Existing cabinet and cabling to be decommissioned and disposed of 
+    Supply and Install 42RU communications cabinet 
+    Supply and install new 24F OS1 fibre link to Primary Server room - estimated at 120m 
+    Supply and install new FOBOTs 
+    Replace 8x cat5 network outlets with new cat6 cabling, 
+    Replace 4x cat6 cables for CCTV cameras to new cabinet 
+3: |
+    Cabinet 3 - Engineering: 
+    Exisiting cabinet to be decommissioned and disposed of 
+    Replace 12x cat5 network outlets with new cat6 cabling back to Server room 
+    Replace 4x cat6 cables for CCTV cameras back to Server room 
+    Supply and install new cat6 patch panels 
+4: |
+    Cabinet 4 - Admin 
+    Existing cabinets and cabling for admin area to remain in place. 
+    Replace 6x cat5 network outlets between admin and existing cabinet in 
+    engineering with new cat6 cabling back to Server room 
+    Supply and install new cat6 patch panels for new cabling 
+    Tidy up existing cabling and patching in server room 
+    Supply and install new 24F OS1 fibre cable to QA Building - estimated at 120m 
+    Supply and install FOBOTs 
+5: |
+    Cabinet 5 - Hay Shed MCC 
+    Existing cabinet and UTP cabling to be retained 
+    Supply and install new 24F OS1 fibre link to Maintenance Workshop - estimated at 200m 
+    Supply and install FOBOTs to terminate above cable runs 
+    Allowance to run 3 x cat6 outlets and cabling for wireless within the Hay Shed building structure 
+6: |
+    Cabinet 6 - By-product MCC 
+    Existing cabinet and cabling to be decommissioned and disposed of 
+    Supply and Install 42RU communications cabinet 
+    Supply and install new 24F OS1 fibre link to Hay Shed MCC - estimated at 120m 
+    Replace existing cabling with cat6 cables back to Cabinet 6 
+    Supply and install new FOBOTs 
+    Supply and install new cat6 patch panels 
+    Supply and install new cat6 data outlets
+7: |
+    Cabinet 7 - Processing (In roof space) 
+    Existing cabinet to be retained (tidy up and re-label cabling , decommission existing multi-mode fibre - Note this is the only location where cross-patch cabling has been considered)
+    Supply, install and test 48 x cat6 cables between this cabinet and Cabinet 8 
+    Supply and install cat6 patch panels 
+    Existing cables to be re-patched to new patch panels
+8: |
+    Cabinet 8 - QA Building 
+    Supply and install 42RU communications cabinet 
+    Existing cabinet and cabling to be decommissioned and disposed of 
+    Supply and install cat6 patch panels 
+    Replace existing cabling with 24 x cat6 cables to Cabinet 8 (provisional) 
+    Supply and install new 24F OS1 fibre link to Retail Area MCC - estimated at 150m 
+    Supply and install FOBOTs 
+9: |
+    Cabinet 9 - Slaughter Floor MCC 
+    Existing cabinet and cabling to be retained 
+    Supply and install 24F OS1 fibre cable to By-Products MCC - estimated at 150m 
+    Supply and install FOBOTs 
+    Utilise existing cat6 camera cabling where possible, replace where necessary 
+    Replace 20x cat5 network outlets with new cat6 cabling back to Cabinet 9 
+    Supply and install new cat 6 patch panels 
+    Supply and install new cat6 data outlets 
+    Replace cabinet in slaugherhouse roof with cat6 cabling back to Engine Room (suggest two services) 
+10: |
+    Cabinet 10 - Cold Stores 
+    Existing cabinet and cabling to be decommissioned and disposed of 
+    Replace existing cat5 network outlets with new cat6 cabling back to Retail Area MCC 
+    Utilise existing cat6 camera cabling where possible, replace where necessary back to Retail Area MCC 
+    Supply and install new cat6 data outlets 
+11: |
+    Cabinet 11 - Retail Area MCC 
+    Supply and Install 42RU server rack 900mm deep (min.) 
+    Supply and install new 24F OS1 fibre cable to Slaughterhouse MCC - estimated at 200m 
+    Supply and install FOBOTs and patch panels as required to terminate above cable runs 
+    Sub-Total ex GST $121,986.86 

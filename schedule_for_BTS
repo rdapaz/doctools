@@ -1,0 +1,27 @@
+
+data = '''
+WAP 03|Day 1
+WAP 05|Day 2
+WAP 13|Day 6
+WAP 17|Day 5
+WAP 23|Day 4
+WAP 24|Day 4
+WAP 01|Day 1
+WAP 02|Day 1
+WAP 04|Day 2
+WAP 08|Day 2
+WAP 10|Day 6
+WAP 11|Day 3
+WAP 12|Day 5
+WAP 18|Day 5
+WAP 20|Day 5
+WAP 06|Day 7
+WAP 07|Day 7
+WAP 09|Day 6
+WAP 14|Day 6
+WAP 15|Day 7
+WAP 19|Day 10
+WAP 21|Day 10
+WAP 22|Day 10
+'''
+

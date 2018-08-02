@@ -41,12 +41,12 @@ class Word:
             for n in range(len(entry)):
                 table.Cell(i, n+1).Range.Text = entry[n]
 
-    def updateIDs(self, bookmark, prefix):
+    def updateIDs(self, bookmark, prefix, init_count):
         rex = re.compile('[A-Z]+', re.IGNORECASE)
         word_range = self.doc.Bookmarks(bookmark).Range 
         table = word_range.Tables(1)
         rows_count = table.Rows.Count
-        count = 0
+        count = init_count
         for rid in range(1, rows_count+1):
             m = rex.search(table.Cell(rid, 1).Range.Text)
             if m:
@@ -57,43 +57,48 @@ class Word:
 
 
 def make_data():
-    data = """
-Macro Design|09 March 2018
-PMP Signed Off|15 March 2018
-Micro Design (Cloud Platform and Workload Migrations)|29 March 2018
-Migration Plan (Cloud Platform and Workload Migrations)|04 April 2018
-Micro Design (Data Protection)|06 April 2018
-Micro Design (DMZ & VPN Relocation)|11 April 2018
-Migration Plan (DMZ & VPN Relocation)|11 April 2018
-Migration Plan (Telephony Services)|25 June 2018
-Migrate Workloads|09 July 2018
-Belmont DC decommissioned|24 July 2018
-DR Test PMP|26 July 2018
-DR Test Plan Completed|05 September 2018
-DR Test PIR and Completion Report|23 October 2018
-""".splitlines()
-    data = [x.split('|') for x in data if len(x) > 0]
-    return data
-    # with open(r'C:\Users\rdapaz\Documents\python_assorted\newer_lessons.json', 'r') as f:
-    #     data =json.load(f)
-    # new_data = [['', a,b,c,d,e] for a,b,c,d,e in data]
-    # for k, v in data.items():
-    #     new_data.append([k, v])
-    # new_data = [x.split('|') for x in data if len(x) > 0]
-    # return new_data
+#     data = """
+# Macro Design|09 March 2018
+# PMP Signed Off|15 March 2018
+# Micro Design (Cloud Platform and Workload Migrations)|29 March 2018
+# Migration Plan (Cloud Platform and Workload Migrations)|04 April 2018
+# Micro Design (Data Protection)|06 April 2018
+# Micro Design (DMZ & VPN Relocation)|11 April 2018
+# Migration Plan (DMZ & VPN Relocation)|11 April 2018
+# Migration Plan (Telephony Services)|25 June 2018
+# Migrate Workloads|09 July 2018
+# Belmont DC decommissioned|24 July 2018
+# DR Test PMP|26 July 2018
+# DR Test Plan Completed|05 September 2018
+# DR Test PIR and Completion Report|23 October 2018
+# """.splitlines()
+#     data = [x.split('|') for x in data if len(x) > 0]
+#     return data
+    with open(r'C:\Users\rdapaz\Documents\scripts\doctools\document_comments.yaml', 'r') as f:
+        data =yaml.load(f)
+    new_data = []
+    for idx, p in enumerate(data):
+        new_data.append([
+                            f"{idx+1}".zfill(2) + '/RDP', 
+                            p['Section'], 
+                            f"Pg. {p['Page']}", 
+                            'te', 
+                            f"Document reads: \"\"\"{p['Reference'].strip()}\"\"\"\n{p['Comment'].strip()}"
+                        ])
+    return new_data
 
 def main(bookmark, data=[], heading_rows=1):
-    my_path = r'C:\Users\rdapaz\Desktop\Belmont DC Relocation - Project Management Plan.docm'
+    my_path = r'C:\Users\rdapaz\Desktop\Emydex Document Review .docx'
     wd = Word(my_path)
     wd.updateTable(bookmark, data, heading_rows)
     # time.sleep(1)
-    # wd.updateIDs(bookmark, prefix="L")
+    # wd.updateIDs(bookmark, prefix="AP", init_count=21)
 
 def mock(data, **kwargs):
     pretty_print(data)
     
 if __name__ == "__main__":
     data = make_data()
-    mock(bookmark='bk1', data=data, heading_rows=1)
-    main(bookmark='bk1', data=data, heading_rows=1)
+    mock(bookmark='bk1', data=data, heading_rows=0)
+    main(bookmark='bk1', data=data, heading_rows=0)
     # main(bookmark='Financials1', data=data, heading_rows=1)

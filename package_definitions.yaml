@@ -1,0 +1,87 @@
+Package 1:
+  Name: Telecommunications Services Changes
+  Description: |
+    The Telecommunication Services Package will cover the following scope of changes:
+    Service Establishment
+     - Introduction of each new/revised Telecommunication Service
+     - Recovery and return of any carrier-owned equipment associated with the above services
+     - Generation of Test plans to verify that each service change has been correctly implemented
+    Service Decommissioning:
+     - Decommission and cancelation of existing telecommunications and data centre services associated with the Belmont Data Centre Project
+Package 2:
+  Name: Telephony Service Relocation
+  Description: |
+    The Telephony Relocation Package will document the detailed planning for this change, including briefing CPM’s contracted maintenance provider (Data3) to 
+    execute the work and any associated technical changes relevant to the relocation, such as re-configuration, reboot of the entire Call Manager environment 
+    and verification of appropriate operation after relocation.
+Package 3:
+  Name: Relocation to Malaga DC
+  Description: |
+    The following tasks are associated with this package:
+     Prior to the establishment of new telco services:
+     - Decommission the Microsoft Exchange 2010 servers currently located in the PER2 VMware cluster (PER2EXC01 and CAP2EXC01), verify correct operation and document changes
+     - OCS Servers will be 'lifted and shifted' to the Malaga DC
+     - Verify scretched VLANs between Managa DC and Belmont DC
+     - Build any necessary VLANs at Malaga DC and ativate into the VM farm network
+     - Relocate DMZ end-points and migrate the following VMs: Netscaler Unified Portal / Citrix, FTP, OWA, SAP Fiori, LMS, Visitor Induction, MetOcean, In Tuition and In Process, Cintellate, Active Sync, Extranet, CoreWorx, MIM Self Service Password Reset and Symantec Mail Gateway 
+     Once new telco services have been established:
+     - Ensure appropriate DMZ firewall rules are in place on the FWaaS
+     - Migrate DMZ addresses to the FWaaS
+     - Verify DMZ apps working via Malaga DC Firewall and FWaaS internet service
+Package 4:
+  Name: Base AWS Production Build
+  Description: |
+    The AWS Production Build package will build the base AWS environment ready for population in subsequent packages. On completion of the AWS implementation, The Cloud Micro-Design will be updated to as-built status.
+Package 5:
+  Name: Data Protection
+  Description: |
+    The data protection package will implement changes to the CPM NetBackup environment to replace the Belmont MSDP pools and tape library with AWS S3 cloud storage.  Once this is completed, the Belmont Netbackup components can be decommissioned.
+Package 6:
+  Name: Dev & Test Build
+  Description: |
+    Dev and Test virtual machines will be migrated to AWS using Server Migration Service.  
+    Server instances will be progressively migrated as transfer performance and outage windows permit.  As each server is migrated, the following tasks will be performed;
+     - Server instance booted and core operation verified (Network settings etc).
+     - Antivirus re-enabled.
+     - Added to appropriate NetBackup policy.
+     - Test plan completed with system owner.
+     - Once all servers have been migrated, the PER2 VMware cluster can be decommissioned. 
+Package 7:
+  Name: Disaster Recovery
+  Description: |
+    The Disaster Recovery package will implement a CloudEndure based DR solution that will replace the existing VMware SRM solution, allowing it to be decommissioned
+    End-to-end tests will be carried out with test workloads to esure that user sessions connected to these workloads are not impacted during the DR test
+    On completion of the Data Protection and DR builds, the Belmont VMware cluster and NetBackup media servers will be decommissioned once all workloads are migrated or otherwise removed to recover the underlying hardware for reuse at the mine site. 
+Package 8:
+  Name: Equipment Destined for Site Decommissioning
+  Description: |
+    Any equipment that will be that will be decommissioned and shipped to site will be handled in this package.
+    Expected tasks are:
+      - Verify that the equipment is no-longer providing any services
+      - Perform final archive backup
+      - Shutdown equipment
+      - Engage a third-party provider to de-rack, catalogue equipment and pack it
+      - Engage a courier service to relocate the equipment to site
+      - Engage a third-party provider to test equipment that has arrived on-site it still in working condition
+      - Update of maintenance contracts with new equipment location information
+Package 9:
+  Name: Equipment Destined for Decommissioning & Disposal
+  Description: |
+    The Equipment Decommissioning Package will document the detailed planning for the removal of CPM equipment located in the Belmont DC. 
+    This change, includes the removal of any logical configuration as well as any physical changes.
+    Expected tasks are:
+     - Verify that the equipment is no-longer providing any services`
+     - Perform final archive backup
+     - Shutdown equipment
+     - Remove configuration information or system wipes
+     - Catalogue equipment being disposed for asset registers
+     - Pack equipment and dispatch using CPM’s couriers to CPM’s responsible disposal contractor
+     - Update CPM As-built documentation, removing the listed equipment from service
+Package 10:
+  Name: Transition to Support and Documentation
+  Description: |
+    The following tasks will be carried out as part of this package:
+     - Close any outstanding changes and CTASKS in ServiceNow
+     - Finalise and issue As-built updates of the Macro Design and Micro Design documents
+     - Generate new SOP for CloudEndure
+     - Update existing SOPs

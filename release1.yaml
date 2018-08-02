@@ -1,0 +1,40 @@
+Planning and Design:
+    Define new hardware required for release 1: 0d|Datacom, Emydex
+    Approval by Harvey Beef/Minderoo: 1d|Jeremy Hill
+    Order hardware: 2hr|Datacom, Harvey Beef
+Hardware delivery:
+    Short Lead time:
+      PCB enclosures for WAPs: 2d|BTS
+      Wireless Access Points for Chillers: 3d|Datacom
+      Wireless Bridge to replace existing Canopy: 3d|Datacom
+    Long Lead time:
+      POE Switch for Receivals Station or POE Driver: 2wk|Datacom
+Implementation:
+    Configure and test Receivals Hut switch: 1d|Datacom
+    Power WAPS on the bench and adopt them into existing controller: 1d|Datacom
+    Receivals Yard:
+        Install power for Emydex IP66 enclosures: 2d|Matt Anzellino
+        Install CAT6 data and POE cable for RH WAP: 4hr|BTS
+        Install new Point to Point link: 4hr|Datacom
+        Install RH WAP and test signal strength: 2hr|Datacom
+        Test connectivity: 2hr|Datacom
+    Chillers:
+        Install CAT6 cables for chillers: 3d|BTS
+        Install enclosure and terminate CAT6: 4hr|BTS
+        Install WAPs: 4hr|BTS
+        Test connectivity: 4hr|Datacom
+    Head Inspection Station:
+        Install new data and power 'dropper': 4hr|BTS
+        Configure switch and interface: 4hr|Matt Anzellino
+        Patch through connection: 1hr|BTS
+        Test connectivity: 2hr|Matt Anzellino
+    Admin:
+      Configure servers:
+        Install new 2012 Windows instances: 4hr|Matt Anzellino
+        Install Emydex application s/w: 2hr|Matt Anzellino
+        Install SQL Server: 2hr|Matt Anzellino
+      Load configuration/data: 16hr|Matt Anzellino
+      Basic functional tests: 8hr|Matt Anzellino
+Testing:
+    Emydex testing prior to go-live: 4hr|Emydex
+Go-Live: 0d|hr

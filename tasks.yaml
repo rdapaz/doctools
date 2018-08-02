@@ -1,0 +1,119 @@
+Macro Design:
+    Macro Design (done): 06/12/2017|06/12/2017
+Procurement:
+    Specifications: 2.0d|estrat, Harvey Beef
+    Quoting & Assessment: 10.0d|
+    Award: 2.0d|Harvey Beef
+    Purchase Orders:
+        BTS:
+            BTS Re-quote: 0d|
+            PO Issued: 1wk|Harvey Beef
+    Delivery Short: 10.0d|Datacom
+    Delivery Long: 30.0d|Datacom
+Micro Design:
+    Security Workshop and Requirements Definition: 5d|estrat, Harvey Beef, Datacom
+    Finalise Detailed design: 10.0d|Datacom
+Cloud (Initial Setup):
+    Establish AWS account: 1.0d|estrat
+    Tenancy: 1.0d|estrat
+    AD / Foundation Instances: 3.0d|estrat
+    Disaster Recovery: 3.0d|estrat
+    Backups: 2.0d|estrat
+Implementation:
+    Establish QA Building:
+        Room refurbishment: 4d|Harvey Beef
+        Installation of power circuits for new rack: 1d|Harvey Beef
+        Installation of rack: 4hr|BTS
+        Relocation of existing switches to new rack: 1d|Harvey Beef
+        Decommissioning and disposal of old wall mounted rack: 1d|Harvey Beef
+    Establish Secondary Server Room (Retail Area MCC):
+        Installation of fire rated partitions: 2d|
+        Installation of power circuits: 1d|Harvey Beef
+        Installation of rack: 2hr|BTS
+    Install new rack in Maintenance:
+        Place new rack in situ: 0.5d|BTS
+        Arrange outage to relocate radios: 2d|Harvey Beef
+        Unmount radios: 0.5d|Harvey Beef
+        Swing rack into position and rack and stack radios: 0.5d|Harvey Beef
+    Install new rack in By-Product MCC: 0.5d|BTS
+    Fibre / Plant / Cabling:
+        Fibre installation:
+            Priority Installation:
+                Run fibre from Cabinet 8 (QA Building) to Cabinet 4 (Server Room/Admin): 2d|BTS
+                Run fibre from Cabinet 11 (Retail Area MCC) to Cabinet 8 (QA Building): 2d|BTS
+            Balance of Plant:
+                Run fibre from Cabinet 2 (Maintenance) to Cabinet 5 (Hay Shed MCC): 2d|BTS
+                Run fibre from Cabinet 4 (Server Room/Admin) to Cabinet 2 (Maintenance): 2d|BTS
+                Run fibre from Cabinet 5 (Hay Shed MCC) to Cabinet 6 (By-product MCC): 2d|BTS
+                Run fibre from Cabinet 6 (By-product MCC) to Cabinet 9 (Engine room): 2d|BTS
+                Run fibre from Cabinet 9 (Engine room) to Cabinet 11 (Retail Area MCC): 2d|BTS
+        UTP cable installation:
+            Replace cat 5 cable runs to old QA Building rack with new cat6 cables run to new rack: 2d|Harvey Beef
+            Run cat6 cables from Cabinet 7 (Processing/Hotbox) to Cabinet 8 (QA Building): 2d|BTS
+            Run cat6 cables from various Stores locations to Cabinet 2 (Maintenance): 2d|BTS
+            Run cat6 cables from various Engineering locations to Cabinet 4 (Server Room/Admin): 2d|BTS
+            Replace cat5 cable runs in By-product MCC with new cat6 cables: 2d|BTS
+            Replace cat5 cable runs in Maintenance with new cat6 cables: 2d|BTS
+    Core Network (switches):
+        Rack and stack switches in Primary Server Room (alongside existing): 2hr|Datacom
+        Rack and stack switches in Secondary Server Room (alongside existing): 2hr|Datacom
+    Edge Network and WIFI:
+        Primary Server Room:  
+            Rack and stack new access switch(es): 2d|Datacom
+            Patch to provide connectivity between server rooms: 0.5d|Datacom
+        Cabinet 2 - Maintenance:   
+            Install new rack mounted UPS: 0.5d|BTS
+            Rack and stack new access switch(es): 2d|Datacom
+        Cabinet 5 - Hay Shed MCC:   
+            Install new rack mounted UPS: 0.5d|BTS
+            Rack and stack new access switch(es): 2d|Datacom
+        Cabinet 6 - By-product MCC:
+            Install new rack mounted UPS: 0.5d|BTS
+            Rack and stack new access switch(es): 2d|Datacom
+        Cabinet 8 - QA Building: 
+            Install new rack mounted UPS: 0.5d|BTS
+            Rack and stack new access switch(es): 2d|Datacom
+        Cabinet 9 - Engine room: 
+            Install new rack mounted UPS: 0.5d|BTS
+            Rack and stack new access switch(es): 2d|Datacom
+        Cabinet 11 - Retail Area MCC: 
+            Install new rack mounted UPS: 0.5d|BTS
+            Rack and stack new access switch(es): 2d|Datacom
+        Patch network to establish LAN: 3d|Datacom
+        Install and test new WAPs: 2wk|Datacom
+        Carry out network tests and baseline new network: 2d|Datacom
+    Wide Area Network and Internet:
+        AWS Direct Connect:
+            AWS Direct Connect orders placed: 0d|Harvey Beef
+            AWS connectivity implemented: 2wk|AWS
+            AWS Direct Connect Provisioned: 5d|estrat
+        MPLS Cloud:
+            Telstra Orders placed: 0d|Harvey Beef
+            Tesltra service establishment: 40d|Telstra
+        Firewalls:
+            Rack and stack Firewall appliances: 3d|Datacom
+            Establish layer 3 connectivity: 5d|Datacom
+            Establish VPN connectivity: 1d|Datacom
+            Apply firewall rules to enforce security policies: 5d|Datacom
+    Servers (Primary):
+        Rack and stack servers: 1.0d|Datacom
+        Establish SAN connectivity: 1d|Datacom 
+        Establish network connectivity: 1d|Datacom
+        Establish VM environment: 2d|Datacom
+    Servers (Backup):
+        Rack and stack servers: 1.0d|Datacom
+        Establish SAN connectivity: 1d|Datacom 
+        Establish network connectivity: 1d|Datacom
+        Establish VM environment: 2d|Datacom
+    Local Config and DR Functional Tests: 5.0d|
+    Security checks: 10.0d|
+Migration:
+    Network:
+        Migrate network to new infrastructure at all locations: 40d|Datacom, estrat
+    Servers:
+        Migrate workloads to new infrastructure: 40d|Datacom, estrat
+Systems Project Environments:
+    ERP Project Environment: 3.0d|
+    Production Systems Project Environment: 3.0d|
+    Test / DEV Environments: 5.0d|
+    Production Environments: 5.0d|

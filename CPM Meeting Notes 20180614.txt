@@ -1,0 +1,21 @@
+Rack being installed, just needs to arrange power installation
+Cloud Design approved
+
+CHG0030646 completed decommissioning of PER2EXC01 and CAP2EXC01 servers
+
+ - Removed CAP2EXC01 and PER2EXC01 from CAP1DAG01 and PER1DAG01 clusters respectively.
+ - Perth mailboxes backed up
+ - Cape Preston back ups
+ - Liaising with Patrick Li to arrange Palo Alto rate limiting change (up to 30 Mbps) for site traffic to be used for Cape Preston
+ - Completed 3rd batch of tape library import
+ - Commecing prep for the 4th batch
+ - Finalising service order for Vocus
+ - Working through package 1
+ - CPC link
+
+
+Notes
+ - Network changes that needed to be made have been made
+ - 2.9metre truck. Access is downstairs in basement, maximum height is 2.9m.  Will need to contact CPM personnel (Rob Armstrong, Gabrial Van or Receiptionist - 9226 8000.  If cannot fit, park around the corner and bring around the troller with the server
+
+ - Bring screws that go with the cage nuts for the tray

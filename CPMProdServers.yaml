@@ -1,0 +1,49 @@
+Tranche 1:
+    Sharepoint Servers:  
+     - PER1WSS01
+     - PER1WSS02
+     - PER1WSS03
+     - PER1FSS03
+     - PER1FSS04
+     - PER1FSS0B
+     - PER1FSS0D
+Tranche 2:
+    File Server: 
+     - PERFS01
+    General Servers: 
+     - PER1ARC02
+     - PER1SQL01
+     - AUDCSVR402
+Tranche 3:
+    Netbackup Server: 
+     - PER1NBU01
+    Aquire Servers:
+     - PER1ACQGS01
+     - PER1ACQ02
+    INX Servers: 
+     - PER1INX01
+     - PER1INXDB01
+Tranche 4:
+    GIS Servers:
+     - PER1GISP01
+     - PER1GISDB01
+     - PER1GISA01
+     - PER1GIS03
+    Coreworx Servers:
+     - PER1CWXWB01
+     - PER1CWXSI01
+     - PER1CWXWF01
+     - PER1CWXDB01
+Tranche 5:
+    SAP Servers:
+     - PER1SAPC01
+     - PER1SAPG01
+     - PER1SAPE02
+     - PER1SAPE01
+     - PER1SAPP01
+     - PER1SAPGW01
+     - PER1SVC01
+     - PER1SQL02
+     - PER1BI04
+     - PER1DS04
+     - PER1SAPSM01

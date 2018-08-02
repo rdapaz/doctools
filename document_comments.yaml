@@ -1,0 +1,56 @@
+- 
+    Section: 1.1
+    Page: 4
+    Reference: |
+        During the pre-go live phase the system is deployed in the Cloud and updated until ready to deploy on premise
+    Comment: |
+        Will there be a requirement to maintain a TEST environment after the project go-live?
+
+- 
+    Section: 1.2.1
+    Page: 5
+    Reference: |
+        This section is normally password protected.
+    Comment: |
+        Is AD integration required or supported?
+
+- 
+    Section: 2.4
+    Page: 8
+    Reference: |
+        A Wi-Fi network will be required to allow continuous on-line access in all areas where hand-held scanning terminals will be used.
+    Comment: |
+        This will be implemented as per the information provided in Section 4.  
+
+- 
+    Section: 2.6
+    Page: 8
+    Reference: |
+        All Handheld scanners, factory floor PCs and office PC’s running the Emydex DMS Client will require access to: [] 
+    Comment: |
+        Does this list need to be updated now that some of the test databases are being set up on AWS?
+
+- 
+    Section: 2.7
+    Page: 9
+    Reference: |
+        Emydex must have the following access: [VPN access]
+    Comment: |
+        What network addresses need to be supported (i.e. what X.X.X.X/Y )
+
+- 
+    Section: 3.4
+    Page: 11
+    Reference: |
+        Interfaces: Wi-Fi
+    Comment: |
+        Which wi-fi standards are supported by the hardware (i.e. 802.11a/b/g/n/ac)
+
+
+
+
+
+
+
+
+

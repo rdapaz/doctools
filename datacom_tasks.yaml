@@ -1,0 +1,36 @@
+Implementation:
+  Harvey LAN - Work Package 1:
+      WP 1.1 - Build: 22/06/2018|20/07/2018
+      WP 1.2 - Test: 23/07/2018|26/07/2018
+      WP 1.3 - Deploy (Transition Stage 1 - Like for Like Wired LAN): 26/07/2018|02/08/2018
+      WP 1.4 - Deploy (Transition Stage 2 - New Wired LAN): 02/08/2018|03/08/2018
+      WP 1.5 - Deploy (Transition Stage 3 - New Wireless LAN): 06/08/2018|13/08/2018
+      WP 1.6 - Deploy (Transition Stage 4 - 802.1x): 13/08/2018|15/08/2018
+  Harvey Firewall/WAN - Work Package 2:
+      WP2.1 - Build: 22/06/2018|25/07/2018
+      WP2.2 - Test: 26/07/2018|27/07/2018
+      WP2.3 - Deploy: 27/07/2018|31/07/2018
+  Harvey Servers - Work Package 3:
+      WP 3.1 - Build: 09/07/2018|01/08/2018
+      WP 3.2 - Test: 02/08/2018|07/08/2018
+      WP 3.4 - Deploy: 08/08/2018|10/08/2018
+  Harvey WLAN - Work Package 4 :
+      WP 4.1 - Build: 11/07/2018|16/07/2018
+      WP 4.2 - Test: 17/07/2018|19/07/2018
+      WP 4.3 - Deploy: 23/07/2018|15/08/2018
+  Harvey DR - Work Package 5:
+      WP 5.1 - Build: 16/07/2018|19/07/2018
+      WP 5.2 - Test: 19/07/2018|23/07/2018
+      WP 5.3 - Deploy: 23/07/2018|30/07/2018
+  Fremantle - Work Package 6:
+      WP 6 - Build: 06/08/2018|15/08/2018
+      WP 6 - Test: 08/08/2018|08/08/2018
+      WP 6 - Deploy: 08/08/2018|10/08/2018
+  Minderoo - Work Package 7:
+      WP 7 - Build: 17/08/2018|21/08/2018
+      WP 7 - Test: 21/08/2018|21/08/2018
+      WP 7 - Deploy: 21/08/2018|23/08/2018
+  Swires/Emergent Cold - Work Package 8:
+      WP 8 - Build: 31/08/2018|03/09/2018
+      WP 8 - Test: 03/09/2018|04/09/2018
+      WP 8 - Deploy: 04/09/2018|06/09/2018
