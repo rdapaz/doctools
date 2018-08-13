@@ -1,0 +1,31 @@
+Server migration:
+  Backup testing (needs sync): 13/08|13/08
+  Live VM migration (needs outage window): 17/08|20/08
+  Test servers: 20/08|20/08
+  Servers up: 20/08|20/08
+WLAN:
+  Configure WAPs and send to site: 15/08|17/08
+Switch cutover:
+    Confirm final numbers/qties for cabling: 13/08|13/08 
+    Install balance of SFPs: 15/08|17/08
+    Install balance of patching: 15/08|17/08
+    RADIUS configuration: 
+      Provide certificate information: 17/08|17/08
+      Configure PKI (Stu): 20/08|22/08
+      Identify devices for MAB pool: 23/08|24/08
+      Test 802.1X on a designated workstation: 24/08|24/08
+    Firewall configuration:
+      Finalise AWS Direct Connect: 13/08|15/08
+      Configure Virtual Palo for AWS cloud: 15/08|17/08
+      Finalise ruleset configuration for Sea of Blue *: 20/08|22/08
+      Local switch connected: 21/08|21/08
+    Corporate Network:
+      Check existing LAN and new LAN connected at layer 2: 23/08|23/08
+      Migrate end-user devices to new LAN: 23/08|24/08
+    CCTV Network:
+      CCTV IP Addresses re-addressed: 24/08|24/08
+      Migrate CCTV devices to new LAN: 24/08|24/08
+    PLC Network:
+      Liaise with mtce, take screen dumps of SCADA displays: 31/08|31/08
+      Get list of isolated equipment: 31/08|31/08
+      Migrate PLC/SCADA network devices to new LAN: 31/08|31/08

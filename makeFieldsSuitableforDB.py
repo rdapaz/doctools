@@ -7,12 +7,28 @@ def pretty_printer(o):
 
 
 data = """
-BTS NAMING
-Location
-To Rack
-Internal/External
-Rough Run Length
-Parts Required
+Release
+Station
+Area
+Emydex Form
+Hardware
+Network Points
+Existing or New
+Make/Model/OS
+Screen size
+Screen Resolution
+String
+Sending Weight?
+Emydex Polling or Receiving Contineous"
+Max Weight of scales
+Weight Increment
+With Alibi Yes/No
+Emydex Install Date
+H/W Install  & Connected to Network Date
+Date Tested with Emydex
+Hardware Cost
+PC Specs
+
 """.splitlines()
 
 def replace_spaces(sText):

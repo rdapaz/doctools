@@ -22,26 +22,27 @@ def value_colName(iVal):
     return retVal
 
 fields = """
-business_owner|text
-tech_contact|text
-job|text
-vm|text
-powerstate|text
-cpus|int
-memory_gb|int
-provisioned_gb|int
-in_use_gb|int
-os|text
-description|text
-disable_av|text
-disable_dvd|text
-page_file|text
-free_disk_space|text
-inst_type|text
-aws_ebs_gp2|text
-aws_ebs_st1|int
-ip_address|text
-backup|text
+release|int
+station|int
+area|text
+emydex_form|text
+hardware|text
+network_points|text
+existing_or_new|text
+make_model_os|text
+screen_size|text
+screen_resolution|text
+_string|text
+sending_weight|text
+emydex_polling_or_receiving_continuous|text
+max_weight_of_scales|text
+weight_increment|text
+with_alibi_yes_no|text
+emydex_install_date|text
+installed_and_connected_date|text
+tested_with_emydex_date|text
+hardware_cost|decimal
+pc_specs|text
 """.splitlines()
 
 
@@ -68,14 +69,14 @@ xlApp = win32com.client.gencache.EnsureDispatch('Excel.Application')
 xlApp.Visible = True
 
 
-path = r'C:\Users\rdapaz\Desktop\Belmont DC Exit - Implementation\Execution\VM Migration\Belmont_to_AWS-Migration RA Updates.XLSX'
+path = r'C:\Users\rdapaz\Desktop\Harvey Beef Hardware 2018052.xlsx'
 wk = xlApp.Workbooks.Open(path)
-sh = wk.Worksheets('Prod')
+sh = wk.Worksheets('Sheet1')
 
 EOF = sh.Range('B65536').End(-4162).Row
 
 vals = []
-for row in range(9, EOF+1):
+for row in range(2, EOF+1):
     if not sh.Range(f'A{row}').Value and not sh.Range(f'B{row}').Value:
         pass
     else:
@@ -98,14 +99,14 @@ for row in range(9, EOF+1):
 
 pretty_printer(vals)
 
-conn = psycopg2.connect("dbname='CPM_VMs' user=postgres")
+conn = psycopg2.connect("dbname='HarveyBeef' user=postgres")
 
 if True:
     cur = conn.cursor()
     dummy_arr = []
 
     # sql1 = f'CREATE TABLE IF NOT EXISTS \"public\".\"{sh.Name}\" (id serial primary key, '
-    sql1 = f'CREATE TABLE IF NOT EXISTS \"public\".\"DevTest\" (id serial primary key, '
+    sql1 = f'CREATE TABLE IF NOT EXISTS \"public\".\"field_equip\" (id serial primary key, '
     dummy_arr = [f"{x['field_name']} {x['data_type']}" for x in arr]
     pretty_printer(dummy_arr)
     dummy = ", ".join(dummy_arr)
@@ -116,7 +117,7 @@ if True:
     conn.commit()
 
     # sql1 = f'INSERT INTO \"public\".\"{sh.Name}\" (\n'
-    sql1 = f'INSERT INTO \"public\".\"DevTest\" (\n'
+    sql1 = f'INSERT INTO \"public\".\"field_equip\" (\n'
     dummy_arr1 = [x['field_name'] for x in arr]
     dummy1 = ", ".join(dummy_arr1)
     sql2 = "\n)\nVALUES\n("

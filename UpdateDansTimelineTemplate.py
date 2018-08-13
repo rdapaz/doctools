@@ -59,6 +59,62 @@ Rounded Rectangle 82:
     Idx: 13
 Rounded Rectangle 83:
     Idx: 14
+Diamond 61:
+    Idx: 1
+Diamond 85:
+    Idx: 2
+Diamond 86:
+    Idx: 3
+Diamond 87:
+    Idx: 4
+Diamond 88:
+    Idx: 5
+Diamond 89:
+    Idx: 6
+Diamond 90:
+    Idx: 7
+Diamond 91:
+    Idx: 8
+Diamond 92:
+    Idx: 9
+Diamond 93:
+    Idx: 10
+Diamond 94:
+    Idx: 11
+Diamond 95:
+    Idx: 12
+Diamond 96:
+    Idx: 13
+Diamond 97:
+    Idx: 14
+TextBox 1:
+    Idx: 1
+TextBox 98:
+    Idx: 2
+TextBox 99:
+    Idx: 3
+TextBox 100:
+    Idx: 4
+TextBox 101:
+    Idx: 5
+TextBox 102:
+    Idx: 6
+TextBox 103:
+    Idx: 7
+TextBox 104:
+    Idx: 8
+TextBox 105:
+    Idx: 9
+TextBox 106:
+    Idx: 10
+TextBox 107:
+    Idx: 11
+TextBox 108:
+    Idx: 12
+TextBox 109:
+    Idx: 13
+TextBox 110:
+    Idx: 14
 '''
 
 def calcNextSunday(dt):
@@ -72,6 +128,7 @@ def calcNextSunday(dt):
 
 
 def adjustForGaps(dt1, dt2):
+    return 0
     GAP = 10
     sunday1 = calcNextSunday(dt1)
     print(sunday1)
@@ -88,15 +145,15 @@ def adjustForGaps(dt1, dt2):
      
 
 def calcStartAndLength(stt, fin):
-    dt_start = datetime.date(2018, 7, 30)
-    dt_finish = datetime.date(2018, 8, 26)
+    dt_start = datetime.date(2018, 8, 13)
+    dt_finish = datetime.date(2018, 9, 9)
     dt1 = datetime.datetime.strptime(stt, '%d/%m/%Y').date()
     dt2 = datetime.datetime.strptime(fin, '%d/%m/%Y').date()
     gap = adjustForGaps(dt1, dt2)
     delta1 = (dt2 - dt1).days + 1 # if (dt2 - dt1).days > 0 else (dt2 - dt1).days + 1 
     delta2 = (dt_finish - dt_start).days + 1
-    start = 255.76 + gap + float(((dt1 - dt_start).days/delta2))*655.5
-    length = float((delta1/delta2))*655.5 if float((delta1/delta2))*655.5 < 655 else 655.5
+    start = 242.57 + gap + float(((dt1 - dt_start).days/delta2))*684.3
+    length = float((delta1/delta2))*684.3 if float((delta1/delta2))*684.3 < 684.0 else 684.3
     print(dt1, dt2, gap, sep="|")
     return start, length
 
@@ -104,20 +161,14 @@ def calcStartAndLength(stt, fin):
 shape_data = yaml.load(slide_shape_data)
 
 timedata = '''
-Core Switches Installed|30/07/2018|26/08/2018
-Servers Installed|30/07/2018|31/07/2018
-Access Switches Installed|30/07/2018|31/07/2018
-Additional SFPs|30/07/2018|5/08/2018
-LANs interconnected|6/08/2018|6/08/2018
-Cabling for WAPs|6/08/2018|18/08/2018
-Wireless Controller Live|20/08/2018|21/08/2018
-WAPS installed and live|21/08/2018|21/08/2018
-Join new servers to domain controllers|6/08/2018|7/08/2018
-Backup solutin installed|7/08/2018|7/08/2018
-Firewalls installed|6/08/2018|9/08/2018
-Firewalls configured/MPLS commissioned|9/08/2018|18/08/2018
-Test Workloads migrated|7/08/2018|8/08/2018
-Backup Tested & workloads migrated|9/08/2018|17/08/2018
+Install WAP01, WAP02 and WAP03|13/08/2018|13/08/2018
+Install WAP04 and WAP05|14/08/2018|14/08/2018
+Install WAP06, WAP07, WAP11 and WAP12|15/08/2018|15/08/2018
+Install WAP11, WAP12, WAP14, WAP19, WAP20, WAP21 and WAP22|17/08/2018|17/08/2018
+Install WAP08, WAP10 and WAP13|22/08/2018|22/08/2018
+Install WAP23 and WAP24|23/08/2018|23/08/2018
+Install WAP09, WAP15 and WAP17|24/08/2018|24/08/2018
+Finalise punchlist items|27/08/2018|7/9/2018
 '''.splitlines()
 
 timedata ={idx+1:row for idx, row in enumerate([x.split('|') for x in timedata if len(x) > 0])}
@@ -127,23 +178,50 @@ print(timedata)
 pp = win32com.client.gencache.EnsureDispatch('Powerpoint.Application')
 pp.Visible = True
 
-deck = pp.Presentations.Open(r'C:\Users\rdapaz\Desktop\Resources\Timeline templatev1.pptm')
+deck = pp.Presentations.Open(r'C:\Users\rdapaz\Desktop\Resources\Timeline templatev2.pptm')
 slide = deck.Slides(2)
 slide.Select()
+
+rounded_recs = {}
 
 for shp in slide.Shapes:
     if shp.Name.startswith('Rectangle') and shp.Name in shape_data:
         shp_idx = shape_data[shp.Name]['Idx']
-        if shp_idx in timedata and shp.HasTextFrame:
-            shp.TextFrame.TextRange.Text = timedata[shp_idx][0]
+        if shp_idx > len(timedata):
+            continue
+        else:
+            if shp_idx in timedata and shp.HasTextFrame:
+                shp.TextFrame.TextRange.Text = timedata[shp_idx][0]
 
     elif shp.Name.startswith('Rounded Rectangle') and shp.Name in shape_data:
         shp_idx = shape_data[shp.Name]['Idx']
         if shp_idx:
-            stt = timedata[shp_idx][1]
-            fin = timedata[shp_idx][2]
-            shp.Left = calcStartAndLength(stt, fin)[0]
-            shp.Width = calcStartAndLength(stt, fin)[1]
-            stt = datetime.datetime.strptime(stt, '%d/%m/%Y').strftime('%d/%m')
-            fin = datetime.datetime.strptime(fin, '%d/%m/%Y').strftime('%d/%m')
-            shp.TextFrame.TextRange.Text = f'{stt} -> {fin}'
+            if shp_idx <= len(timedata):
+                stt = timedata[shp_idx][1]
+                fin = timedata[shp_idx][2]
+                shp.Left = calcStartAndLength(stt, fin)[0]
+                shp.Width = calcStartAndLength(stt, fin)[1]
+                stt = datetime.datetime.strptime(stt, '%d/%m/%Y').strftime('%d/%m')
+                fin = datetime.datetime.strptime(fin, '%d/%m/%Y').strftime('%d/%m')
+                rounded_recs[shp_idx] = (shp.Left + shp.Width, fin)
+                shp.TextFrame.TextRange.Text = ''
+            else:
+                continue
+
+    elif shp.Name.startswith('Diamond') and shp.Name in shape_data:
+        shp_idx = shape_data[shp.Name]['Idx']
+        if shp_idx:
+            if shp_idx <= len(timedata):
+                shp.Left = rounded_recs[shp_idx][0] - shp.Width/2
+                shp.TextFrame.TextRange.Text = ''
+            else:
+                continue
+
+    elif shp.Name.startswith('TextBox') and shp.Name in shape_data:
+        shp_idx = shape_data[shp.Name]['Idx']
+        if shp_idx:
+            if shp_idx <= len(timedata):
+                shp.Left = rounded_recs[shp_idx][0] + 5
+                shp.TextFrame.TextRange.Text = rounded_recs[shp_idx][1]
+            else:
+                continue
